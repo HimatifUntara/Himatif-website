@@ -20,6 +20,7 @@ module.exports = {
       },
       boxShadow: {
         'blacky': '0px 6px 20px #000',
+        'blured': '0px 20px 10px #253A4A',
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

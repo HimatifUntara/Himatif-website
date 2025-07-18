@@ -1,5 +1,6 @@
 <script setup>
 import AboutUs from '../component/AboutUs.vue';
+import OurGallery from '../component/OurGallery.vue';
 import {ref} from 'vue';
 
 const sectionRefs = ref([]);
@@ -44,11 +45,14 @@ const sectionRefs = ref([]);
             </div>
         </div>
     </section>
-    <section id="aboutUs" ref="sectionRefs[1]" class="bg-errie h-auto">
+    <section id="aboutUs" ref="sectionRefs[1]" class="bg-errie lg:pb-24 h-full">
     <div>
         <div class="grid mx-auto grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 gap-6">
-            <AboutUs />
+            <AboutUs/>
         </div>
     </div>
-</section>
+    </section>
+    <section id="ourGallery" ref="sectionRefs[2]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
+        <OurGallery />
+    </section>
 </template>

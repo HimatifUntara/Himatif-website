@@ -4,11 +4,11 @@ import Sidebar from './Sidebar.vue'
 
 const sidebarOpen = ref(false)
 const navLinks = [
-    { label: 'Beranda', href: '#Home' },
-    { label: 'Divisi', href: '#Divisi' },
-    { label: 'Dosen', href: '#Dosen' },
-    { label: 'Berita', href: '#Berita' },
-    { label: 'Bengkel IT', href: '#Bengkel IT' }
+    { label: 'Home', href: '#Home' },
+    { label: 'About Us', href: '#AboutUs' },
+    { label: 'Profile', href: '#Dosen' },
+    { label: 'Proker', href: '#Proker' },
+    { label: 'Aspirasi', href: '#Aspirasi' }
 ]
 const activeNav = ref(navLinks[0].href) // default aktif di Beranda
 </script>

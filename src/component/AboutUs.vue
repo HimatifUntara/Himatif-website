@@ -40,13 +40,13 @@ import { aboutUs } from '../composables/constants/AboutUs';
                 :initial="{ opacity: 0, y: 100 }"
                 :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut' } }"
                 :delay="500"
-                :hovered="{ y: -8, transition: { duration: 150, ease: 'easeOut' } }" class="bg-cosmos/70 cursor-pointer text-holy lg:py-10 md:rounded-b-md lg:rounded-xl leading-7 p-4  shadow-blacky" >
+                :hovered="{ y: -8, transition: { duration: 150, ease: 'easeOut' } }" class="bg-cosmos/70 cursor-pointer text-holy lg:py-10 md:rounded-b-md lg:rounded-xl leading-7 p-4 shadow-blacky" >
                 {{ about.description }}
             </p>
         </div>
     </div>
 
-    <section class="lg:hidden xl:hidden w-full h-auto sm:flex flex-col">
+    <section class="lg:hidden xl:hidden mb-20 w-full h-auto sm:flex flex-col">
         <div class="mx-auto flex flex-col gap-4 items-center cursor-pointer justify-center mt-20">
             <div class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"></div>
             <span v-motion
