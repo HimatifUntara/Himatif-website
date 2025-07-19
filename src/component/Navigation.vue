@@ -1,15 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import Sidebar from './Sidebar.vue'
+import { navLinks } from '../composables/constants/Navigation'
 
 const sidebarOpen = ref(false)
-const navLinks = [
-    { label: 'Home', href: '#Home' },
-    { label: 'About Us', href: '#AboutUs' },
-    { label: 'Profile', href: '#Dosen' },
-    { label: 'Proker', href: '#Proker' },
-    { label: 'Aspirasi', href: '#Aspirasi' }
-]
 const activeNav = ref(navLinks[0].href) // default aktif di Beranda
 </script>
 
@@ -18,7 +12,7 @@ const activeNav = ref(navLinks[0].href) // default aktif di Beranda
 <nav class=" z-[999] shadow-blacky fixed w-full flex justify-between h-20 items-center bg-errie">
     <!-- Logo -->
     <div class="flex ml-3 md:ml-10 w-14 h-14 gap-2">
-        <img class="w-full h-full object-contain" src="/public/images/LogoHimatif.png" alt="Himatif">
+        <img class="w-full h-full object-contain" src="/public/images/LogoHimatif.webp" alt="Himatif">
         <div class="flex flex-col mt-1 sm:mt-0">
             <h1 class="uppercase text-lg sm:text-2xl text-holy font-bold">Himatif</h1>
             <h2 class="text-holy uppercase sm:text-lg font-bold -mt-1.5">Untara</h2>

@@ -16,7 +16,7 @@ module.exports = {
         holy: '#FBFBFB'
       },
       backgroundImage: {
-        'Home': "url('/images/Home.jpg')", 
+        'Home': "url('/images/Home.webp')", 
       },
       boxShadow: {
         'blacky': '0px 6px 20px #000',
