@@ -1,5 +1,6 @@
 <script setup>
 import AboutUs from '../component/AboutUs.vue';
+import SocialMedia from '../component/SocialMedia.vue';
 import Vision from '../component/Vision.vue';
 const OurGallery = defineAsyncComponent(() => 
 import ('../component/OurGallery.vue')
@@ -21,8 +22,9 @@ const sectionRefs = ref([]);
                 class="relative mt-28 flex flex-row w-auto lg:mt-36 h-auto mx-auto gap-1 z-10">
                 <div class=" w-10 h-10 animate-float absolute -z-10 lg:w-32 left-0 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki lg:h-32 rounded-2xl"></div>
                 <div class="w-10 h-10 animate-floates absolute -z-10 lg:w-32 right-0 bottom-0 bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki lg:h-32 rounded-2xl"></div>
-                <img src="/public/images/LogoHimatif.webp" alt="Himatif Untara" class="w-[100px] h-fit lg:w-[170px]">
                 <img src="/public/images/untara.webp" alt="Universitas Tangerang Raya" class="w-[100px] h-fit lg:w-[170px]">
+                <img src="/public/images/LogoHimatif.webp" alt="Himatif Untara" class="w-[100px] h-fit lg:w-[170px]">
+                <img src="/public/images/Specta.webp" alt="Specta" class="w-[100px] h-fit lg:w-[170px]">
             </div>
             <div 
                 class="text-holy text-center my-4">
@@ -60,5 +62,8 @@ const sectionRefs = ref([]);
     </section>
     <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <OurGallery />
+    </section>
+    <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
+        <SocialMedia />
     </section>
 </template>

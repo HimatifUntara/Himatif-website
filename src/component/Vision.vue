@@ -1,6 +1,36 @@
 <script setup>
 import { reactive } from 'vue';
 import { cards } from '../composables/constants/Vision';
+
+const cardMotionProps = reactive({
+    initial: { 
+        opacity: 0, 
+        y: 50
+    },
+    visibleOnce: { 
+        opacity: 1, 
+        y: 0, 
+        transition: { 
+            duration: 700, 
+            ease: 'easeOut' 
+        } 
+    },
+    rest: { 
+        y: 0, 
+        transition: { 
+            duration: 200, 
+            ease: 'easeOut' 
+        } 
+    }, 
+    hovered: { 
+        y: -8,
+        transition: { 
+            duration: 200, 
+            ease: 'easeOut' 
+        } 
+    },
+});
+
 </script>
 
 <template>
@@ -19,20 +49,42 @@ import { cards } from '../composables/constants/Vision';
     </div>
 
     <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
-    <div
-        v-for="(card, index) in cards.slice(0, 2)"
-        :key="index"
-        class="group p-6 h-72 cursor-pointer text-white rounded-xl bg-errie shadow-blacky transition-all duration-300 hover:bg-cosmos hover:text-white"
-        :class="card.hover ? 'hover:-translate-y-2' : ''"
-    >
-        <h2 class="text-2xl font-bold mb-2">{{ card.title }}</h2>
-        <p class="text-base">{{ card.text }}</p>
-    </div>
+        <div
+            v-for="(card, index) in cards.slice(0, 2)"
+            :key="index"
+            v-motion
+            :initial="cardMotionProps.initial"
+            :visibleOnce="{ 
+                ...cardMotionProps.visibleOnce, 
+                transition: { 
+                    ...cardMotionProps.visibleOnce.transition, 
+                    delay: 100 * index // Tambahkan delay untuk efek staggered
+                } 
+            }"
+            :rest="cardMotionProps.rest"
+            :hovered="cardMotionProps.hovered"
+            class="group p-6 h-72 cursor-pointer text-white rounded-xl bg-errie shadow-blacky transition-all duration-300 hover:bg-cosmos hover:text-white"
+            :class="card.hover ? 'hover:-translate-y-2' : ''"
+        >
+            <h2 class="text-2xl font-bold mb-2">{{ card.title }}</h2>
+            <p class="text-base">{{ card.text }}</p>
+        </div>
 
-    <div
-        class="mb-[150px] lg:col-span-2 p-6 rounded-xl bg-errie/70 text-white shadow-md text-sm lg:text-xl text-center"
-    >
-        <p>{{ cards[2].text }}</p>
-    </div>
+        <div
+            v-motion
+            :initial="cardMotionProps.initial"
+            :visibleOnce="{ 
+                ...cardMotionProps.visibleOnce, 
+                transition: { 
+                    ...cardMotionProps.visibleOnce.transition, 
+                    delay: 100 * 2 // Delay setelah card kedua (index 1)
+                } 
+            }"
+            :rest="cardMotionProps.rest"
+            :hovered="cardMotionProps.hovered"
+            class="mb-[150px] lg:col-span-2 p-6 rounded-xl background-cosmos bg-gradient-to-r from-cosmos 30% to-errie text-white shadow-blacky text-sm lg:text-xl text-center"
+        >
+            <p>{{ cards[2].text }}</p>
+        </div>
     </div>
 </template>
