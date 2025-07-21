@@ -48,7 +48,7 @@ const cardMotionProps = reactive({
         class="bg-holy w-[100px] h-1 bg-gradient-to-l from-khaki from-56% to-holy"></div>
     </div>
 
-    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div
             v-for="(card, index) in cards.slice(0, 2)"
             :key="index"
@@ -82,7 +82,7 @@ const cardMotionProps = reactive({
             }"
             :rest="cardMotionProps.rest"
             :hovered="cardMotionProps.hovered"
-            class="mb-[150px] lg:col-span-2 p-6 rounded-xl background-cosmos bg-gradient-to-r from-cosmos 30% to-errie text-white shadow-blacky text-sm lg:text-xl text-center"
+            class="mb-[150px] lg:col-span-2 p-6 rounded-xl background-cosmos bg-gradient-to-r from-cosmos 30% to-errie text-white shadow-blacky text-sm lg:text-lg text-center"
         >
             <p>{{ cards[2].text }}</p>
         </div>

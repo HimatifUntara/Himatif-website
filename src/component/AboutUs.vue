@@ -40,7 +40,7 @@ import { aboutUs } from '../composables/constants/AboutUs';
                 :initial="{ opacity: 0, y: 100 }"
                 :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut' } }"
                 :delay="500"
-                :hovered="{ y: -8, transition: { duration: 150, ease: 'easeOut' } }" class="bg-cosmos/70 cursor-pointer text-holy lg:py-10 md:rounded-b-md lg:rounded-xl leading-7 p-4 shadow-blacky" >
+                :hovered="{ y: -8, transition: { duration: 150, ease: 'easeOut' } }" class="bg-cosmos/70 text-justify cursor-pointer text-holy lg:py-10 md:rounded-b-md lg:rounded-xl leading-7 p-4 shadow-blacky" >
                 {{ about.description }}
             </p>
         </div>

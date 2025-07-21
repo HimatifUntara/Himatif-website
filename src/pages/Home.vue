@@ -1,6 +1,7 @@
 <script setup>
 import AboutUs from '../component/AboutUs.vue';
 import SocialMedia from '../component/SocialMedia.vue';
+import StrukturMember from '../component/StrukturMember.vue';
 import Vision from '../component/Vision.vue';
 const OurGallery = defineAsyncComponent(() => 
 import ('../component/OurGallery.vue')
@@ -60,10 +61,13 @@ const sectionRefs = ref([]);
     <section id="vision" ref="sectionRefs[2]" class="w-full h-full py-5 bg-charcoal">
         <Vision />
     </section>
-    <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
+    <section id="struktuMember" ref="sectionRefs[3]" class="w-full h-full lg:pb-[140px] py-5 bg-errie">
+        <StrukturMember />
+    </section>
+    <section id="ourGallery" ref="sectionRefs[4]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <OurGallery />
     </section>
-    <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
+    <!-- <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <SocialMedia />
-    </section>
+    </section> -->
 </template>

@@ -24,6 +24,7 @@
     "@iconify-json/vscode-icons": "^1.2.23",
     "@vueuse/core": "^13.5.0",
     "@vueuse/motion": "^3.0.3",
+    "lucide-vue-next": "^0.525.0",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   }
