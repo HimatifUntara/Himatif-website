@@ -1,6 +1,5 @@
 <script setup>
 import AboutUs from '../component/AboutUs.vue';
-import SocialMedia from '../component/SocialMedia.vue';
 import StrukturMember from '../component/StrukturMember.vue';
 import Vision from '../component/Vision.vue';
 const OurGallery = defineAsyncComponent(() => 
