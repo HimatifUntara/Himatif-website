@@ -56,10 +56,10 @@ watch(selectedDivision, () => {
         v-for="division in divisions"
         :key="division.name"
         @click="selectedDivision = division"
-        class="px-4 py-2 rounded-lg border transition-all duration-300"
+        class="px-4 py-2 text-holy rounded-lg border transition-all duration-300"
         :class="{
-        'bg-khaki text-white': selectedDivision.name === division.name,
-        'hover:bg-khaki hover:text-white': selectedDivision.name !== division.name
+        'bg-khaki text-holy': selectedDivision.name === division.name,
+        'hover:bg-khaki hover:text-holy': selectedDivision.name !== division.name
         }"
     >
         {{ division.name }}

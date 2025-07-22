@@ -20,7 +20,7 @@ const activeNav = ref(navLinks[0].href) // default aktif di Beranda
     </div>
 
     <!-- Desktop Nav -->
-    <ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
+    <!-- <ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
         <li v-for="link in navLinks" :key="link.label">
             <a
                 class="relative font-semibold transition duration-200 hover:text-khaki px-4 rounded-md"
@@ -32,7 +32,30 @@ const activeNav = ref(navLinks[0].href) // default aktif di Beranda
                 :class="activeNav === link.href ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'"></span>
             </a>
         </li>
-    </ul>
+    </ul> -->
+
+    <ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
+  <li
+    v-for="link in navLinks"
+    :key="link.label"
+    class="list-none"
+  >
+    <router-link
+      :to="link.href"
+      class="relative font-semibold transition duration-200 hover:text-khaki px-4 rounded-md"
+      style="cursor:pointer; user-select: none;"
+      @click="activeNav = link.href"
+    >
+      {{ link.label }}
+      <span
+        class="absolute left-4 right-4 -bottom-1 h-[3px] rounded bg-khaki transition-all ease-in-out duration-300"
+        :class="activeNav === link.href ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'"
+      ></span>
+    </router-link>
+  </li>
+</ul>
+
+
 
     <!-- Hamburger Icon (Mobile) -->
     <button

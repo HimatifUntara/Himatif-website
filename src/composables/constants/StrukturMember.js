@@ -4,7 +4,7 @@ export const divisions = [
     images: [
       { src: '/images/KSB/Arsalan Padhur Rohman.jpg', name: 'Arsalan (Ketua Himpunan)' },
       { src: '/images/KSB/ryandika diva fahlevi.jpg', name: 'Ryan (Wakil Ketua)' },
-      { src: '/images/KSB/sastriani.heic', name: 'Sastriani (Seketaris 1)' },
+      { src: '/images/KSB/sastriani.webp', name: 'Sastriani (Seketaris 1)' },
       { src: '/images/KSB/BUNGA REVA.jpg', name: 'Bunga (Sekertaris 2)' },
       { src: '/images/KSB/Yusrina Fitria Cahyani.jpg', name: 'Yusrina (Bendahara 1)' },
       { src: '/images/KSB/Adilla Sahasika Oktora.jpg', name: 'Adilla (Bendahara 2)' }
@@ -20,7 +20,7 @@ export const divisions = [
       { src: '/images/LITBANG/Fendi.webp', name: 'Fendi (Anggota)' },
       { src: '/images/LITBANG/Enjel.webp', name: 'Enjel (Anggota)' },
       { src: '/images/LITBANG/Haris.webp', name: 'Haris (Anggota)' },
-      { src: '/images/LITBANG/Arul.webp', name: 'Arul (Anggota)' },
+      { src: '/images/LITBANG/Muhamad pahrul Rohmatulloh.jpg', name: 'Arul (Anggota)' },
       { src: '/images/LITBANG/Aldo.webp', name: 'Aldo (Anggota)' },
     //   { src: '/images/LITBANG/A', name: 'Ridho (Anggota)' },
     //   { src: '/images/LITBANG/A', name: 'Lulu (Anggota)' },
@@ -54,7 +54,7 @@ export const divisions = [
       { src: '/images/KOMINFO/Yudha Gani Azis.jpg', name: 'Yudha (Anggota)' },
       { src: '/images/KOMINFO/Nadia Nur Aulia.jpg', name: 'Nadia (Anggota)' },
       { src: '/images/KOMINFO/Aldo Saputra.JPG', name: 'Aldo (Anggota)' },
-      { src: '/images/KOMINFO/NABILA RAHMA FITRIANA.jpg', name: 'Nabila (Anggota)' },
+      { src: '/images/KOMINFO/NABILA RAHMA  FITRIANA.jpg', name: 'Nabila (Anggota)' },
     ]
   },
   {
