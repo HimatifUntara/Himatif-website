@@ -12,6 +12,7 @@ export default defineConfig({
       resolvers: [
         IconsResolver({
           prefix: 'Icon',
+          enabledCollections: ['carbon', 'simple-icons'],
         }),
       ],
     }),

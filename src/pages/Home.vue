@@ -2,6 +2,7 @@
 import AboutUs from '../component/AboutUs.vue';
 import StrukturMember from '../component/StrukturMember.vue';
 import Vision from '../component/Vision.vue';
+import Footer from '../component/Footer.vue';
 const OurGallery = defineAsyncComponent(() => 
 import ('../component/OurGallery.vue')
 );
@@ -65,6 +66,9 @@ const sectionRefs = ref([]);
     </section>
     <section id="ourGallery" ref="sectionRefs[4]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <OurGallery />
+    </section>
+    <section>
+        <Footer />
     </section>
     <!-- <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <SocialMedia />
