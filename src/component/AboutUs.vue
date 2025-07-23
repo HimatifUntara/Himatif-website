@@ -93,23 +93,12 @@ import { aboutUs } from '../composables/constants/AboutUs';
 
       <div
         v-motion
-        :initial="{ opacity: 0, x: 50 }"
-        :visibleOnce="{ opacity: 1, x: 0, transition: { delay: 400, duration: 1000, ease: 'easeInOut' } }"
-        class="w-60 sm:w-[90%] text-holy bg-cosmos/70 shadow-blacky p-5 rounded-xl"
-      >
-        <p class="text-[10px] sm:text-base">
-          Sebagai entitas yang berdedikasi, <strong class="text-khaki">HIMATIF</strong> hadir sebagai organisasi kemahasiswaan. Organisasi ini memiliki peran penting, yaitu berada langsung di bawah naungan Badan Eksekutif Mahasiswa Fakultas Teknik, guna mendukung serta mengelola berbagai inisiatif dan program bagi seluruh Mahasiswa Teknologi Informasi.
-        </p>
-      </div>
-
-      <div
-        v-motion
         :initial="{ opacity: 0, x: -50 }"
         :visibleOnce="{ opacity: 1, x: 0, transition: { delay: 600, duration: 1000, ease: 'easeInOut' } }"
         class="w-60 sm:w-[90%] text-holy bg-cosmos/70 shadow-blacky p-10 rounded-xl"
       >
         <p class="text-[10px] sm:text-base">
-          Sebagai perwakilan mahasiswa, <strong class="text-khaki">HIMATIF</strong> adalah organisasi utama untuk mahasiswa di Jurusan Teknologi Informasi. Kehadirannya sangat penting dalam mengatur berbagai kegiatan, program, dan ide-ide yang berhubungan langsung dengan kebutuhan serta pengembangan semua mahasiswa di jurusan ini.
+          <strong class="text-khaki">HIMATIF</strong> adalah organisasi utama untuk mahasiswa di Jurusan Teknologi Informasi. Kehadirannya sangat penting dalam mengatur berbagai kegiatan, program, dan ide-ide yang berhubungan langsung dengan kebutuhan serta pengembangan semua mahasiswa di jurusan ini.
         </p>
       </div>
     </div>

@@ -17,7 +17,7 @@
         <div class="flex gap-3 justify-center pt-2.5 flex-wrap">
           <!-- WhatsApp -->
           <a
-            href="https://wa.me/087773832234"
+            href="https://wa.me/083898348449"
             target="_blank"
             aria-label="WhatsApp"
             class="text-holy text-xl border border-holy rounded-full w-12 h-12 flex justify-center items-center transition duration-300 hover:text-white hover:border-none hover:bg-gradient-to-br from-green-500 to-teal-500"
@@ -27,7 +27,7 @@
 
           <!-- Instagram -->
           <a
-            href="https://instagram.com/himatif.untara"
+            href="https://www.instagram.com/himatif.untara?igsh=MWd0NTMwaW1ueTN4ZA=="
             target="_blank"
             aria-label="Instagram"
             class="text-white text-xl border border-white rounded-full w-12 h-12 flex justify-center items-center transition duration-300 hover:text-white hover:border-none hover:bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400"
@@ -37,7 +37,7 @@
 
           <!-- YouTube -->
           <a
-            href="https://youtube.com/himatif_untara"
+            href="https://m.youtube.com/@himatif.untara_channel297?fbclid=PAQ0xDSwLtNAhleHRuA2FlbQIxMAABp3Sl2GfFkGntEa89W_YR0kP6blKDcrZ9OYE7CMnhGxwhjx3jU7_-z5tF6wPS_aem_YnYiZK1ZTSqq0ealGz-nWg"
             target="_blank"
             aria-label="YouTube"
             class="text-white text-xl border border-white rounded-full w-12 h-12 flex justify-center items-center transition duration-300 hover:text-white hover:border-none hover:bg-gradient-to-br from-red-600 to-black"
@@ -47,7 +47,7 @@
 
           <!-- TikTok -->
           <a
-            href="https://tiktok.com/@yourtiktokusername"
+            href="https://www.tiktok.com/@himatif_untara?_t=8pvY7CSLRY8&_r=1&fbclid=PAQ0xDSwLtNB5leHRuA2FlbQIxMQABp1aMlSL_BeM1UVNlWsywJu_a6wQcOPxjTRHZNaF53aqrrIZ7DJ1pdCwUBs50_aem_CKm31MjN9OIhPOVi1GFl0Q"
             target="_blank"
             aria-label="TikTok"
             class="text-white text-xl border border-white rounded-full w-12 h-12 flex justify-center items-center transition duration-300 hover:text-white hover:border-none hover:bg-gradient-to-br from-cyan-400 to-pink-500"

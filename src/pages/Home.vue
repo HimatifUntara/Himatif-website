@@ -3,10 +3,13 @@ import AboutUs from '../component/AboutUs.vue';
 import StrukturMember from '../component/StrukturMember.vue';
 import Vision from '../component/Vision.vue';
 import Footer from '../component/Footer.vue';
-const OurGallery = defineAsyncComponent(() => 
-import ('../component/OurGallery.vue')
-);
-import {defineAsyncComponent, ref} from 'vue';
+import OurGallery from '../component/OurGallery.vue';
+import {ref} from 'vue';
+
+// const OurGallery = defineAsyncComponent(() => 
+// import ('../component/OurGallery.vue')
+// );
+// import {defineAsyncComponent, ref} from 'vue';
 
 const sectionRefs = ref([]);
 
