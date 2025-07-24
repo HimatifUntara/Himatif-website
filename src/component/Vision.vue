@@ -65,8 +65,8 @@ const cardMotionProps = reactive({
         ...cardMotionProps.visibleOnce, 
         transition: { 
           ...cardMotionProps.visibleOnce.transition, 
-          delay: 600 
-        } 
+          delay: 600
+        }
       }"
       class="mb-[120px] cursor-pointer lg:col-span-2 p-6 rounded-xl bg-gradient-to-r from-cosmos 30% to-errie text-white shadow-blacky text-sm lg:text-lg text-center will-change-transform"
     >
