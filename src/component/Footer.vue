@@ -16,14 +16,14 @@
         <p class="mb-2.5 text-base">Follow Social Media Kami:</p>
         <div class="flex gap-3 justify-center pt-2.5 flex-wrap">
           <!-- WhatsApp -->
-          <a
+          <!-- <a
             href="https://wa.me/083898348449"
             target="_blank"
             aria-label="WhatsApp"
             class="text-holy text-xl border border-holy rounded-full w-12 h-12 flex justify-center items-center transition duration-300 hover:text-white hover:border-none hover:bg-gradient-to-br from-green-500 to-teal-500"
           >
             <IconSimpleIconsWhatsapp class="w-6 h-6" />
-          </a>
+          </a> -->
 
           <!-- Instagram -->
           <a
