@@ -1,40 +1,57 @@
 <script setup>
-import { reactive } from 'vue';
-import { cards } from '../composables/constants/Vision';
+import { reactive } from "vue";
+import { cards } from "../composables/constants/Vision";
 
 const cardMotionProps = reactive({
-  initial: { 
-    opacity: 0, 
-    y: -40 // dari atas
+  initial: {
+    opacity: 0,
+    y: -40, // dari atas
   },
-  visibleOnce: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 900,  // lebih lambat dari sebelumnya
-      ease: 'easeOut' 
-    } 
+  visibleOnce: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 900, // lebih lambat dari sebelumnya
+      ease: "easeOut",
+    },
   },
 });
 </script>
 
 <template>
-  <div class="mx-auto mb-12 flex flex-col gap-5 items-center justify-center mt-20">
-    <div class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"></div>
-    
+  <div
+    class="mx-auto mb-12 flex flex-col gap-5 items-center justify-center mt-20"
+  >
+    <div
+      class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
+    ></div>
+
     <h1
       v-motion
       :initial="{ opacity: 0, y: -20 }"
-      :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 400, duration: 900, ease: 'easeOut' } }"
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: { delay: 400, duration: 900, ease: 'easeOut' },
+      }"
       class="text-holy text-3xl font-bold lg:text-5xl"
     >
-      Vision <span class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki bg-clip-text text-transparent">&</span> Mision
+      Vision
+      <span
+        class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki bg-clip-text text-transparent"
+        >&</span
+      >
+      Mision
     </h1>
-    
-    <div 
+
+    <div
       v-motion
       :initial="{ opacity: 0, y: -20 }"
-      :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 600, duration: 900, ease: 'easeOut' } }" 
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: { delay: 600, duration: 900, ease: 'easeOut' },
+      }"
       class="bg-holy w-[100px] h-1 bg-gradient-to-l from-khaki from-56% to-holy"
     ></div>
   </div>
@@ -45,12 +62,12 @@ const cardMotionProps = reactive({
       :key="index"
       v-motion
       :initial="cardMotionProps.initial"
-      :visibleOnce="{ 
-        ...cardMotionProps.visibleOnce, 
-        transition: { 
-          ...cardMotionProps.visibleOnce.transition, 
-          delay: 300 * index // Tambah jeda antar kartu
-        } 
+      :visibleOnce="{
+        ...cardMotionProps.visibleOnce,
+        transition: {
+          ...cardMotionProps.visibleOnce.transition,
+          delay: 300 * index, // Tambah jeda antar kartu
+        },
       }"
       class="p-6 h-72 cursor-pointer shadow-blacky text-white rounded-xl bg-errie hover:bg-cosmos transition-colors duration-300 will-change-transform"
     >
@@ -61,12 +78,12 @@ const cardMotionProps = reactive({
     <div
       v-motion
       :initial="cardMotionProps.initial"
-      :visibleOnce="{ 
-        ...cardMotionProps.visibleOnce, 
-        transition: { 
-          ...cardMotionProps.visibleOnce.transition, 
-          delay: 600
-        }
+      :visibleOnce="{
+        ...cardMotionProps.visibleOnce,
+        transition: {
+          ...cardMotionProps.visibleOnce.transition,
+          delay: 600,
+        },
       }"
       class="mb-[120px] cursor-pointer lg:col-span-2 p-6 rounded-xl bg-gradient-to-r from-cosmos 30% to-errie text-white shadow-blacky text-sm lg:text-lg text-center will-change-transform"
     >
