@@ -987,20 +987,6 @@ video {
   animation: float 7s ease-in-out infinite;
 }
 
-@keyframes wiggle{
-  0%, 100%{
-    transform: rotate(-3deg);
-  }
-
-  50%{
-    transform: rotate(3deg);
-  }
-}
-
-.animate-wiggle{
-  animation: wiggle 1s ease-in-out infinite;
-}
-
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1545,15 +1531,6 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.blur{
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1568,6 +1545,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity{
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1576,12 +1559,6 @@ video {
 
 .transition-transform{
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-colors{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1685,6 +1662,11 @@ video {
   border-style: none;
 }
 
+.hover\:bg-cosmos:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 20 27 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-errie:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(28 31 35 / var(--tw-bg-opacity, 1));
@@ -1695,41 +1677,8 @@ video {
   background-color: rgb(175 157 128 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-cosmos:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(94 20 27 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-gradient-to-br:hover{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.hover\:bg-gradient-to-l:hover{
-  background-image: linear-gradient(to left, var(--tw-gradient-stops));
-}
-
-.hover\:bg-gradient-to-r:hover{
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.hover\:from-cosmos:hover{
-  --tw-gradient-from: #5E141B var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(94 20 27 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.hover\:from-khaki:hover{
-  --tw-gradient-from: #AF9D80 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(175 157 128 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.hover\:to-cosmos:hover{
-  --tw-gradient-to: #5E141B var(--tw-gradient-to-position);
-}
-
-.hover\:to-khaki:hover{
-  --tw-gradient-to: #AF9D80 var(--tw-gradient-to-position);
 }
 
 .hover\:text-holy:hover{
@@ -1747,21 +1696,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.hover\:shadow-2xl:hover{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.group:hover .group-hover\:rotate-12{
-  --tw-rotate: 12deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:scale-110{

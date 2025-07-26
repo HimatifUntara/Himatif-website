@@ -1,28 +1,30 @@
 <script setup>
-import { aboutUs } from '../composables/constants/AboutUs';
+import { aboutUs } from "../composables/constants/AboutUs";
 </script>
 
 <template>
   <!-- Desktop Section -->
-  <div class="mx-auto mb-[50px] hidden lg:flex flex-col gap-5 items-center cursor-pointer justify-center mt-20">
-    <div class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"></div>
-    <span
-      v-motion
-      :initial="{ opacity: 0, y: -20 }"
-      :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800, ease: 'easeOut' } }"
-      class="bg-cosmos/50 text-holy p-2 rounded-full w-[130px] text-sm text-center"
-    >
-      About HIMATIF
-    </span>
+  <div
+    class="mx-auto mb-[50px] hidden lg:flex flex-col gap-5 items-center cursor-pointer justify-center mt-20"
+  >
+    <div
+      class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
+    ></div>
 
     <h1
       v-motion
       :initial="{ opacity: 0, y: -20 }"
-      :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800, ease: 'easeOut' } }"
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: { delay: 400, duration: 800, ease: 'easeOut' },
+      }"
       class="text-holy font-bold lg:text-5xl"
     >
       About
-      <span class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki uppercase bg-clip-text text-transparent">
+      <span
+        class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki uppercase bg-clip-text text-transparent"
+      >
         Himatif
       </span>
     </h1>
@@ -47,7 +49,11 @@ import { aboutUs } from '../composables/constants/AboutUs';
       <p
         v-motion
         :initial="{ opacity: 0, y: 100 }"
-        :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 500, duration: 1000, ease: 'easeOut' } }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 500, duration: 1000, ease: 'easeOut' },
+        }"
         :hovered="{ y: -8, transition: { duration: 150, ease: 'easeOut' } }"
         class="bg-cosmos/70 text-justify cursor-pointer text-holy py-10 rounded-xl leading-7 p-4 shadow-blacky"
       >
@@ -58,12 +64,20 @@ import { aboutUs } from '../composables/constants/AboutUs';
 
   <!-- Mobile Section -->
   <section class="lg:hidden mb-20 w-full h-auto flex flex-col">
-    <div class="mx-auto flex flex-col gap-4 items-center cursor-pointer justify-center mt-20">
-      <div class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"></div>
+    <div
+      class="mx-auto flex flex-col gap-4 items-center cursor-pointer justify-center mt-20"
+    >
+      <div
+        class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
       <span
         v-motion
         :initial="{ opacity: 0, y: -20 }"
-        :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800, ease: 'easeOut' } }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 200, duration: 800, ease: 'easeOut' },
+        }"
         class="bg-cosmos/50 text-holy p-2 rounded-full w-[130px] text-sm text-center"
       >
         About HIMATIF
@@ -71,11 +85,17 @@ import { aboutUs } from '../composables/constants/AboutUs';
       <h1
         v-motion
         :initial="{ opacity: 0, y: -20 }"
-        :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800, ease: 'easeOut' } }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 200, duration: 800, ease: 'easeOut' },
+        }"
         class="text-holy text-3xl font-bold my-4"
       >
         About
-        <span class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki uppercase bg-clip-text text-transparent">
+        <span
+          class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki uppercase bg-clip-text text-transparent"
+        >
           Himatif
         </span>
       </h1>
@@ -83,22 +103,37 @@ import { aboutUs } from '../composables/constants/AboutUs';
       <div
         v-motion
         :initial="{ opacity: 0, x: -50 }"
-        :visibleOnce="{ opacity: 1, x: 0, transition: { delay: 200, duration: 1000, ease: 'easeInOut' } }"
+        :visibleOnce="{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 200, duration: 1000, ease: 'easeInOut' },
+        }"
         class="w-60 sm:w-[90%] text-holy bg-cosmos/70 shadow-blacky p-10 rounded-xl"
       >
         <p class="text-[10px] sm:text-base">
-          <strong class="text-khaki">HIMATIF</strong> adalah wadah pengembangan dan aspirasi Mahasiswa Teknologi Informasi yang tumbuh atas kesadaran dan rasa tanggung jawab sosial dari, oleh, dan untuk mahasiswa, khususnya di Universitas Tangerang Raya.
+          <strong class="text-khaki">HIMATIF</strong> adalah wadah pengembangan
+          dan aspirasi Mahasiswa Teknologi Informasi yang tumbuh atas kesadaran
+          dan rasa tanggung jawab sosial dari, oleh, dan untuk mahasiswa,
+          khususnya di Universitas Tangerang Raya.
         </p>
       </div>
 
       <div
         v-motion
         :initial="{ opacity: 0, x: -50 }"
-        :visibleOnce="{ opacity: 1, x: 0, transition: { delay: 600, duration: 1000, ease: 'easeInOut' } }"
+        :visibleOnce="{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 600, duration: 1000, ease: 'easeInOut' },
+        }"
         class="w-60 sm:w-[90%] text-holy bg-cosmos/70 shadow-blacky p-10 rounded-xl"
       >
         <p class="text-[10px] sm:text-base">
-          <strong class="text-khaki">HIMATIF</strong> adalah organisasi utama untuk mahasiswa di Jurusan Teknologi Informasi. Kehadirannya sangat penting dalam mengatur berbagai kegiatan, program, dan ide-ide yang berhubungan langsung dengan kebutuhan serta pengembangan semua mahasiswa di jurusan ini.
+          <strong class="text-khaki">HIMATIF</strong> adalah organisasi utama
+          untuk mahasiswa di Jurusan Teknologi Informasi. Kehadirannya sangat
+          penting dalam mengatur berbagai kegiatan, program, dan ide-ide yang
+          berhubungan langsung dengan kebutuhan serta pengembangan semua
+          mahasiswa di jurusan ini.
         </p>
       </div>
     </div>

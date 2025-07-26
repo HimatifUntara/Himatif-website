@@ -1,6 +1,6 @@
 <script setup>
-import AboutUs from "../component/AboutUs.vue";
-import Vision from "../component/Vision.vue";
+import StrukturMember from "../component/StrukturMember.vue";
+import OurGallery from "../component/OurGallery.vue";
 import Footer from "../component/Footer.vue";
 import { ref } from "vue";
 
@@ -12,7 +12,7 @@ import { ref } from "vue";
 const sectionRefs = ref([]);
 </script>
 
-<template>
+<template class="scroll-smooth">
   <!-- after:content-[''] after:w-20 after:left-0 after:-z-110 after:animate-wiggle after:bg-cosmos after:h-20 after:absolute after:rounded-xl -->
   <section
     class="overflow-x-hidden w-full h-[680px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
@@ -63,7 +63,7 @@ const sectionRefs = ref([]);
           :delay="400"
           class="font-bold text-3xl lg:text-7xl my-7 pb-2 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki bg-clip-text text-transparent"
         >
-          Selamat Datang
+          Our Strength Lies In Our Team
         </h1>
         <p
           v-motion
@@ -76,8 +76,8 @@ const sectionRefs = ref([]);
           :delay="700"
           class="text-md"
         >
-          Website Resmi Himpunan Mahasiswa Teknologi Informasi Universitas
-          Tangerang Raya
+          Kami persembahkan jajaran kabinet HIMATIF yang penuh semangat!
+          Bersama, kita kuatkan formasi dan wujudkan inovasi!
         </p>
         <div
           v-motion
@@ -90,31 +90,30 @@ const sectionRefs = ref([]);
           :delay="500"
           class="mx-auto mt-10 w-fit h-fit bg-cosmos p-3 rounded-full animate-bounce"
         >
-          <a href="#aboutUs"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
+          <a href="#strukturmember" title="Scroll to Struktur Member">
+            <IconCarbonArrowDown class="lg:w-8 h-auto"
+          /></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="aboutUs" ref="sectionRefs[1]" class="bg-errie lg:pb-24 h-full">
-    <div>
-      <div class="grid mx-auto grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 gap-6">
-        <AboutUs />
-      </div>
-    </div>
-  </section>
-
-  <!-- Visi & Misi -->
   <section
-    id="vision"
-    ref="sectionRefs[2]"
-    class="w-full h-full py-5 bg-charcoal"
+    id="strukturmember"
+    ref="sectionRefs[3]"
+    class="w-full h-full lg:pb-[140px] py-5 bg-errie"
   >
-    <Vision />
+    <StrukturMember />
   </section>
 
-  <!-- Footer -->
+  <section
+    id="ourGallery"
+    ref="sectionRefs[4]"
+    class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]"
+  >
+    <OurGallery />
+  </section>
+
   <section>
     <Footer />
   </section>

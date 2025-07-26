@@ -7,9 +7,9 @@
 // ]
 
 export const navLinks = [
-    { label: 'Beranda', href: '/' },
-    { label: 'Divisi', href: '/Divisi' },
-    { label: 'Dosen', href: '/Dosen' },
-    { label: 'Karya Mahasiswa', href: '/Karya' },
-    { label: 'Bengkel IT', href: '/Bengkel' }
-]
+  { label: "Beranda", href: "/" },
+  { label: "About Us", href: "/About" },
+  { label: "Profile", href: "/Profile" },
+  { label: "Karya Mahasiswa", href: "/Karya" },
+  { label: "Bengkel IT", href: "/Bengkel" },
+];
