@@ -913,14 +913,6 @@ video {
   width: 100%;
 }
 
-.w-\[400px\]{
-  width: 400px;
-}
-
-.w-\[500px\]{
-  width: 500px;
-}
-
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -1210,6 +1202,10 @@ video {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-opacity-40{
   --tw-bg-opacity: 0.4;
 }
@@ -1252,6 +1248,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-errie{
+  --tw-gradient-from: #1C1F23 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(28 31 35 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-errie\/90{
   --tw-gradient-from: rgb(28 31 35 / 0.9) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(28 31 35 / 0) var(--tw-gradient-to-position);
@@ -1282,15 +1284,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-errie{
-  --tw-gradient-from: #1C1F23 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(28 31 35 / 0) var(--tw-gradient-to-position);
+.from-charcoal\/90{
+  --tw-gradient-from: rgb(37 58 74 / 0.9) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(37 58 74 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-errie{
-  --tw-gradient-to: rgb(28 31 35 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #1C1F23 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .via-errie\/70{
@@ -1303,12 +1300,17 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #ec4899 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-charcoal\/70{
+  --tw-gradient-to: rgb(37 58 74 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(37 58 74 / 0.7) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-black{
   --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
-.to-cosmos{
-  --tw-gradient-to: #5E141B var(--tw-gradient-to-position);
+.to-charcoal{
+  --tw-gradient-to: #253A4A var(--tw-gradient-to-position);
 }
 
 .to-errie{
@@ -1337,10 +1339,6 @@ video {
 
 .to-transparent{
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.to-charcoal{
-  --tw-gradient-to: #253A4A var(--tw-gradient-to-position);
 }
 
 .bg-cover{
@@ -1437,12 +1435,24 @@ video {
   padding-bottom: 5rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pt-2\.5{
   padding-top: 0.625rem;
 }
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-\[100px\]{
+  padding-bottom: 100px;
+}
+
+.pb-\[10px\]{
+  padding-bottom: 10px;
 }
 
 .text-center{
@@ -1613,11 +1623,6 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.drop-shadow-lg{
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .backdrop-blur-lg{
   --tw-backdrop-blur: blur(16px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1686,10 +1691,6 @@ video {
 
 .will-change-transform{
   will-change: transform;
-}
-
-.\[background\:linear-gradient\(90deg\2c _\#AF9D80_0\%\2c _\#5E141B_50\%\2c _\#253A4A_80\%\)\]{
-  background: linear-gradient(90deg, #AF9D80 0%, #5E141B 50%, #253A4A 80%);
 }
 
 .\[background\:radial-gradient\(circle\2c _rgba\(28\2c 31\2c 35\2c 1\)_50\%\2c _rgba\(37\2c 58\2c 74\2c 1\)_100\%\)\]{
@@ -1882,11 +1883,6 @@ video {
   .md\:gap-4{
     gap: 1rem;
   }
-
-  .md\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px){
@@ -1926,12 +1922,12 @@ video {
     width: 170px;
   }
 
-  .lg\:w-\[700px\]{
-    width: 700px;
-  }
-
   .lg\:w-\[600px\]{
     width: 600px;
+  }
+
+  .lg\:w-\[700px\]{
+    width: 700px;
   }
 
   .lg\:max-w-md{

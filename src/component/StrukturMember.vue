@@ -126,7 +126,7 @@ watch(selectedDivision, () => {
       >
         <template v-for="(img, index) in loopImages" :key="index">
           <div
-            class="flex bg-errie rounded-md flex-col items-center mx-2 flex-shrink-0 transform transition-transform duration-300 hover:scale-105"
+            class="flex bg-transparent rounded-md flex-col items-center mx-2 flex-shrink-0 transform transition-transform duration-300 hover:scale-105"
           >
             <img
               :src="img.src"
@@ -134,7 +134,7 @@ watch(selectedDivision, () => {
               class="w-[300px] h-[300px] object-cover rounded-t-md"
               loading="lazy"
             />
-            <p class="mt-2 text-center text-sm font-medium text-holy/70">
+            <p class="mt-2 pb-[10px] text-center text-sm font-medium text-holy/70">
               {{ img.name }}
             </p>
           </div>
@@ -144,7 +144,7 @@ watch(selectedDivision, () => {
         class="pointer-events-none absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-errie/90 via-errie/70 to-transparent"
       ></div>
       <div
-        class="pointer-events-none absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-errie/90 via-errie/70 to-transparent"
+        class="pointer-events-none absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-charcoal/90 via-charcoal/70 to-transparent"
       ></div>
     </div>
   </section>
