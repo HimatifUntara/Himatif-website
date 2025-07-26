@@ -103,7 +103,7 @@ const sectionRefs = ref([]);
   <section
     id="strukturmember"
     ref="sectionRefs[3]"
-    class="w-full h-full lg:pb-[140px] py-5 bg-gradient-to-r from-khaki to-cosmos"
+    class="w-full h-full lg:pb-[140px] py-5 bg-gradient-to-r from-errie to-charcoal"
   >
     <StrukturMember />
   </section>
@@ -117,14 +117,11 @@ const sectionRefs = ref([]);
   <section
     id="ourGallery"
     ref="sectionRefs[4]"
-    class="w-full h-full py-5 bg-errie [background:linear-gradient(90deg,_#AF9D80_0%,_#5E141B_50%,_#253A4A_80%)]"
+    class="w-full h-full py-5 bg-charcoal"
   >
     <OurGallery />
   </section>
 
   <!-- Footer -->
   <Footer />
-  <!-- <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
-        <SocialMedia />
-    </section> -->
 </template>

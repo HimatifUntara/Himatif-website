@@ -1,101 +1,56 @@
 <script setup>
-const dosenList = [
-  {
-    nama: "Muhammad Nur Ikhsan, S.Kom., M.Eng",
-    foto: "/images/dosen/Muhammad Nur Ikhsan, S.T.,M.Eng.jpg",
-    bidang: "Dekan Fakultas Teknik",
-    kontak: "mnurikhsan@untara.ac.id",
-  },
-  {
-    nama: "Saryani.,S.Kom.,M.TI",
-    foto: "/images/dosen/Saryani.,S.Kom.,M.TI.png",
-    bidang: "Kaprodi Teknologi Informasi",
-    kontak: "saryani@untara.ac.id",
-  },
-  {
-    nama: "Fabio Junior.,S.Kom.,M.Kom",
-    foto: "/images/dosen/Fabio Junior.,S.Kom.,M.Kom.png",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "fabioj@untara.ac.id",
-  },
-  {
-    nama: "Irawan.,S.Kom.,M.Kom",
-    foto: "/images/dosen/Irawan.,S.Kom.,M.Kom.png",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "irawan@untara.ac.id",
-  },
-  {
-    nama: "Rika Nurhidayah.,S.Kom.,M.Kom",
-    foto: "/images/dosen/Rika Nurhidayah.,S.Kom.,MM.png",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "rikanurhidayah@untara.ac.id",
-  },
-  {
-    nama: "Kevin Septianzah, S.Kom.,M.Kom",
-    foto: "/images/dosen/Kevin Septianzah, S.Kom.,M.Kom..jpg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "kevins@untara.ac.id",
-  },
-  {
-    nama: "Septa Febriyansyah.,S.M.,S.Kom.,M.Kom",
-    foto: "/images/dosen/Septa Febriyansyah.,S.M.,S.Kom.,M.Kom.png",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "septaf@untara.ac.id",
-  },
-  {
-    nama: "Amelia Sholikhaq, S.Kom.,M.Kom",
-    foto: "/images/dosen/Amelia Sholikhaq, S.Kom.,M.Kom..jpg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "amelias@untara.ac.id",
-  },
-  {
-    nama: "R Wahyudi.,ST.,M.Kom",
-    foto: "/images/dosen/R Wahyudi.,ST.,M.Kom.png",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "rwahyudi@untara.ac.id",
-  },
-  {
-    nama: "Bambang Libriantoro,  S.Kom.,M.Kom",
-    foto: "/images/dosen/Bambang Libriantoro,  S.Kom.,M.Kom.jpeg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "bambangl@untara.ac.id",
-  },
-  {
-    nama: "Ayi Krisnha W.A.N.,S.Kom.,M.Kom",
-    foto: "/images/dosen/AYI KRISNHA W.A.N.jpg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "ayikrisnha@untara.ac.id",
-  },
-  {
-    nama: "Singgih mitro, s, S.T,M.T.",
-    foto: "/images/dosen/Singgih mitro, s, S.T.,M.T.jpg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "singgihm@untara.ac.id",
-  },
-  {
-    nama: "Ahmad Deni Muttaqin, S.Kom.,M.S",
-    foto: "/images/dosen/Ahmad Deni Muttaqin, S.Kom.,M.S.jpg",
-    bidang: "Dosen Teknologi Informasi",
-    kontak: "denim@untara.ac.id",
-  },
-
-  // Tambahkan data dosen lain sesuai kebutuhan
-];
+import { dosenList } from "../composables/constants/Dosen";
 </script>
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-cosmos via-errie to-khaki py-16 px-4"
+    class="min-h-screen bg-gradient-to-br from-cosmos to-errie py-16 px-4"
   >
-    <h1
-      class="text-3xl md:text-5xl font-bold text-center text-holy mb-12 drop-shadow-lg"
+    <div
+      class="mx-auto mb-[50px] flex flex-col gap-5 items-center cursor-pointer justify-center mt-20"
     >
-      Dosen
-      <span
-        class="bg-gradient-to-r from-khaki to-cosmos bg-clip-text text-transparent"
-        >Teknologi Informasi</span
+      <div
+        class="bg-holy w-[300px] lg:w-[600px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
+      <h1
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 400, duration: 800, ease: 'easeOut' },
+        }"
+        class="text-holy text-center text-3xl font-bold lg:text-5xl"
       >
-    </h1>
+      Information Technology
+        <span
+          class="bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki bg-clip-text text-transparent"
+          > Lecturer</span
+        >
+      </h1>
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 600, duration: 900, ease: 'easeOut' },
+        }"
+        class="bg-holy w-[100px] h-1 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 700, duration: 1000, ease: 'easeOut' },
+        }"
+        class="text-center text-[13px] w-[300px] lg:text-[16px] lg:w-[700px] my-5 text-holy"
+      >
+        Inilah para dosen Teknologi Informasi kami. Dengan keahlian dan passion mereka, mereka membimbing generasi penerus untuk menjadi talenta teknologi yang unggul.
+      </p>
+    </div>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
     >
