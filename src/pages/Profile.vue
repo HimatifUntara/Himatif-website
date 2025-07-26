@@ -1,6 +1,7 @@
 <script setup>
 import StrukturMember from "../component/StrukturMember.vue";
 import OurGallery from "../component/OurGallery.vue";
+import Dosen from "../component/Dosen.vue";
 import Footer from "../component/Footer.vue";
 import { ref } from "vue";
 
@@ -12,7 +13,7 @@ import { ref } from "vue";
 const sectionRefs = ref([]);
 </script>
 
-<template class="scroll-smooth">
+<template>
   <!-- after:content-[''] after:w-20 after:left-0 after:-z-110 after:animate-wiggle after:bg-cosmos after:h-20 after:absolute after:rounded-xl -->
   <section
     class="overflow-x-hidden w-full h-[680px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
@@ -98,25 +99,31 @@ const sectionRefs = ref([]);
     </div>
   </section>
 
+  <!-- Struktur Member -->
   <section
     id="strukturmember"
     ref="sectionRefs[3]"
-    class="w-full h-full lg:pb-[140px] py-5 bg-errie"
+    class="w-full h-full lg:pb-[140px] py-5 bg-gradient-to-r from-khaki to-cosmos"
   >
     <StrukturMember />
   </section>
 
+  <!-- Dosen -->
+  <section id="dosen" ref="sectionRefs[5]">
+    <Dosen />
+  </section>
+
+  <!-- Our Gallery -->
   <section
     id="ourGallery"
     ref="sectionRefs[4]"
-    class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]"
+    class="w-full h-full py-5 bg-errie [background:linear-gradient(90deg,_#AF9D80_0%,_#5E141B_50%,_#253A4A_80%)]"
   >
     <OurGallery />
   </section>
 
-  <section>
-    <Footer />
-  </section>
+  <!-- Footer -->
+  <Footer />
   <!-- <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
         <SocialMedia />
     </section> -->
