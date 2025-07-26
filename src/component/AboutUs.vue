@@ -70,18 +70,7 @@ import { aboutUs } from "../composables/constants/AboutUs";
       <div
         class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
       ></div>
-      <span
-        v-motion
-        :initial="{ opacity: 0, y: -20 }"
-        :visibleOnce="{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 200, duration: 800, ease: 'easeOut' },
-        }"
-        class="bg-cosmos/50 text-holy p-2 rounded-full w-[130px] text-sm text-center"
-      >
-        About HIMATIF
-      </span>
+
       <h1
         v-motion
         :initial="{ opacity: 0, y: -20 }"
