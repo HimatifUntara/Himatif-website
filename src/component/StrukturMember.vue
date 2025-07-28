@@ -1,6 +1,5 @@
 <script setup>
-import { ref, computed, watch } from "vue";
-import { useIntervalFn } from "@vueuse/core";
+import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 import { divisions } from "../composables/constants/StrukturMember";
 
 const selectedDivision = ref(divisions[0]);
@@ -14,29 +13,30 @@ const loopImages = computed(() => [
   ...selectedDivision.value.images,
 ]);
 
-let position = ref(0);
-const transition = ref("transition-transform duration-1000 ease-linear");
+let position = 0;
+let animationId = null;
+const speed = 0.7; // px per frame
 
-useIntervalFn(() => {
+function animate() {
   if (!isHovered.value) {
-    position.value += 1;
-    offset.value = -position.value;
-
-    // Jika sudah melewati setengah array, geser offset ke awal duplikat tanpa animasi
-    if (position.value >= selectedDivision.value.images.length * imageWidth) {
-      transition.value = ""; // hilangkan animasi
-      position.value = 0;
-      offset.value = 0;
-      // setelah satu frame, kembalikan animasi
-      setTimeout(() => {
-        transition.value = "transition-transform duration-1000 ease-linear";
-      }, 16);
+    position += speed;
+    // Jika sudah sampai setengah panjang array, langsung lompat ke awal tanpa animasi
+    if (position >= selectedDivision.value.images.length * imageWidth) {
+      position = 0;
     }
+    offset.value = -position;
   }
-}, 16); // ~60fps
+  animationId = requestAnimationFrame(animate);
+}
 
+onMounted(() => {
+  animationId = requestAnimationFrame(animate);
+});
+onUnmounted(() => {
+  if (animationId) cancelAnimationFrame(animationId);
+});
 watch(selectedDivision, () => {
-  position.value = 0;
+  position = 0;
   offset.value = 0;
 });
 </script>
@@ -119,24 +119,62 @@ watch(selectedDivision, () => {
       class="scroll-smooth relative overflow-hidden max-w-6xl mx-auto px-4 group"
     >
       <div
-        :class="['flex', transition]"
+        class="flex"
         :style="{ transform: `translateX(${offset}px)` }"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"
       >
         <template v-for="(img, index) in loopImages" :key="index">
           <div
-            class="flex bg-transparent rounded-md flex-col items-center mx-2 flex-shrink-0 transform transition-transform duration-300 hover:scale-105"
+            class="flex bg-transparent rounded-md flex-col items-center mx-2 flex-shrink-0 hover:scale-105"
           >
             <img
               :src="img.src"
               :alt="img.name"
+              :jabatan="img.jabatan"
               class="w-[300px] h-[300px] object-cover rounded-t-md"
               loading="lazy"
             />
-            <p class="mt-2 pb-[10px] text-center text-sm font-medium text-holy/70">
-              {{ img.name }}
-            </p>
+            <div class="flex items-center justify-center gap-2 w-full">
+              <div>
+                <p class="mt-2 text-center text-sm font-medium text-holy/70">
+                  {{ img.name }}
+                </p>
+                <p
+                  v-if="img.jabatan"
+                  class="mb-3 text-center text-xs font-normal text-holy/50"
+                >
+                  {{ img.jabatan }}
+                </p>
+              </div>
+              <a
+                v-if="img.instagram"
+                :href="img.instagram"
+                target="_blank"
+                rel="noopener"
+                class="ml-2 text-pink-500 hover:text-pink-600 transition-colors"
+                title="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="inline w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    x="2"
+                    y="2"
+                    rx="5"
+                    stroke-width="2"
+                  />
+                  <circle cx="12" cy="12" r="5" stroke-width="2" />
+                  <circle cx="17" cy="7" r="1.5" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
           </div>
         </template>
       </div>
@@ -150,4 +188,3 @@ watch(selectedDivision, () => {
   </section>
 </template>
 
-<style scoped></style>
