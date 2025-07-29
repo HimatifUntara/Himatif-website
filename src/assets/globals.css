@@ -867,10 +867,6 @@ video {
   height: 3px;
 }
 
-.h-\[680px\]{
-  height: 680px;
-}
-
 .h-\[740px\]{
   height: 740px;
 }
@@ -1423,10 +1419,6 @@ video {
 
 .p-2{
   padding: 0.5rem;
-}
-
-.p-3{
-  padding: 0.75rem;
 }
 
 .p-4{
