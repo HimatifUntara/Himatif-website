@@ -4,7 +4,7 @@ export const divisions = [
     images: [
       { src: "/images/KSB/Arsalan Padhur Rohman.jpg", name: "Arsalan Padhur Rohman", jabatan: "Ketua Himpunan", instagram: "https://www.instagram.com/arsalan.pdhr" },
       { src: "/images/KSB/ryandika diva fahlevi.jpg", name: "Ryan Diva Fahlevi", jabatan: "Wakil Ketua", instagram: "https://www.instagram.com/ryandika.fhlv" },
-      { src: "/images/KSB/sastriani.webp", name: "Sastriani Prajadepa", jabatan: "Sekretaris 1", instagram: "https://www.instagram.com/sastrianiipr/" },
+      { src: "/images/KSB/sastriani.jpg", name: "Sastriani Prajadepa", jabatan: "Sekretaris 1", instagram: "https://www.instagram.com/sastrianiipr/" },
       { src: "/images/KSB/Bunga.jpg", name: "Bunga Reva", jabatan: "Sekretaris 2", instagram: "https://www.instagram.com/bungarevaa/" },
       { src: "/images/KSB/Yusrina Fitria Cahyani.jpg", name: "Yusrina Fitria Cahyani", jabatan: "Bendahara 1", instagram: "https://www.instagram.com/ysrnftrchyn/" },
       { src: "/images/KSB/Adilla Sahasika Oktora.jpg", name: "Adilla Sahasika Oktora", jabatan: "Bendahara 2", instagram: "https://www.instagram.com/adillasahasikaaa/" },
