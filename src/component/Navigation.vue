@@ -1,10 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Sidebar from './Sidebar.vue'
 import { navLinks } from '../composables/constants/Navigation'
 
+const route = useRoute()
+const activeNav = ref(route.path) // aktifkan sesuai path saat ini
+
+// Update activeNav jika route berubah (navigasi manual/refresh)
+watch(route, (val) => {
+  activeNav.value = val.path
+})
 const sidebarOpen = ref(false)
-const activeNav = ref(navLinks[0].href) // default aktif di Beranda
 </script>
 
 <template>
