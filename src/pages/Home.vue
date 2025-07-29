@@ -15,7 +15,7 @@ const sectionRefs = ref([]);
 <template>
   <!-- after:content-[''] after:w-20 after:left-0 after:-z-110 after:animate-wiggle after:bg-cosmos after:h-20 after:absolute after:rounded-xl -->
   <section
-    class="overflow-x-hidden w-full h-[680px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
+    class="overflow-hidden w-full h-[740px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
   >
     <div class="bg-black/75 h-full flex flex-col my-auto justify-center">
       <div
@@ -27,29 +27,35 @@ const sectionRefs = ref([]);
           transition: { duration: 2000, ease: 'easeOut' },
         }"
         :delay="300"
-        class="relative mt-28 flex flex-row w-auto lg:mt-36 h-auto mx-auto gap-1 z-10"
+        class="relative mt-28 flex flex-row w-auto lg:mt-36 h-auto mx-auto gap-1 z-10 items-center"
       >
+        <!-- Animasi kiri -->
         <div
-          class="w-10 h-10 animate-float absolute -z-10 lg:w-32 left-0 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki lg:h-32 rounded-2xl"
+          class="absolute left-0 top-14 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-float bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
+         <!-- Animasi kanan -->
         <div
-          class="w-10 h-10 animate-floates absolute -z-10 lg:w-32 right-0 bottom-0 bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki lg:h-32 rounded-2xl"
+          class="absolute right-7 bottom-1 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
+        <!-- Logo Untara -->
         <img
           src="/public/images/untara.webp"
           alt="Universitas Tangerang Raya"
-          class="w-[100px] h-fit lg:w-[170px]"
+          class="w-[100px] h-fit lg:w-[170px] mr-10"
         />
+        <!-- Logo Himatif -->
         <img
           src="/public/images/LogoHimatif.webp"
           alt="Himatif Untara"
           class="w-[100px] h-fit lg:w-[170px]"
         />
+        <!-- Logo Specta -->
         <img
-          src="/public/images/Specta.webp"
+          src="/public/images/Specta1.png"
           alt="Specta"
-          class="w-[100px] h-fit lg:w-[170px]"
+          class="w-[150px] h-fit lg:w-[230px] ml-4 mt-14"
         />
+       
       </div>
       <div class="text-holy text-center my-4">
         <h1
@@ -60,10 +66,10 @@ const sectionRefs = ref([]);
             y: 0,
             transition: { duration: 2000, ease: 'easeOut' },
           }"
-          :delay="400"
+          :delay="300"
           class="font-bold text-3xl lg:text-7xl my-7 pb-2 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki bg-clip-text text-transparent"
         >
-          Selamat Datang
+          Our Strength Lies In Our Team
         </h1>
         <p
           v-motion
@@ -76,8 +82,8 @@ const sectionRefs = ref([]);
           :delay="700"
           class="text-md"
         >
-          Website Resmi Himpunan Mahasiswa Teknologi Informasi Universitas
-          Tangerang Raya
+         Kami persembahkan jajaran kabinet HIMATIF yang penuh semangat!
+          Bersama, kita kuatkan formasi dan wujudkan inovasi!
         </p>
         <div
           v-motion
@@ -88,7 +94,7 @@ const sectionRefs = ref([]);
             transition: { duration: 2000, ease: 'easeOut' },
           }"
           :delay="500"
-          class="mx-auto mt-10 w-fit h-fit bg-cosmos p-3 rounded-full animate-bounce"
+          class="mx-auto mt-10 w-fit h-fit bg-cosmos p-2 rounded-full animate-bounce"
         >
           <a href="#aboutUs"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
         </div>

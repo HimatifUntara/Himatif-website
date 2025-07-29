@@ -72,7 +72,7 @@ export const dosenList = [
     kontak: "singgihm@untara.ac.id",
   },
   {
-    nama: "Ahmad Deni Muttaqin, S.Kom.,M.S",
+    nama: "Ahmad Deni Muttaqin, S.Kom.,M.Si",
     foto: "/images/dosen/Ahmad Deni Muttaqin, S.Kom.,M.S.jpg",
     bidang: "Dosen Teknologi Informasi",
     kontak: "denim@untara.ac.id",

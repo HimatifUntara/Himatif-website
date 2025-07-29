@@ -46,9 +46,10 @@ import { dosenList } from "../composables/constants/Dosen";
           y: 0,
           transition: { delay: 700, duration: 1000, ease: 'easeOut' },
         }"
-        class="text-center text-[13px] w-[300px] lg:text-[16px] lg:w-[700px] my-5 text-holy"
+        class="text-center text-holy my-5 mx-auto leading-relaxed tracking-wide text-base md:text-lg max-w-xl md:max-w-2xl"
       >
-        Inilah para dosen Teknologi Informasi kami. Dengan keahlian dan passion mereka, mereka membimbing generasi penerus untuk menjadi talenta teknologi yang unggul.
+        Inilah para dosen Teknologi Informasi kami. Dengan keahlian dan passion mereka,<br class="hidden md:inline" />
+        mereka membimbing generasi penerus untuk menjadi talenta teknologi yang unggul.
       </p>
     </div>
     <div
@@ -60,7 +61,7 @@ import { dosenList } from "../composables/constants/Dosen";
         class="relative bg-white/20 backdrop-blur-lg rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform duration-500 hover:scale-105 hover:shadow-2xl group"
       >
         <div
-          class="w-28 h-28 mb-4 rounded-full overflow-hidden border-4 border-khaki shadow-lg transition-all duration-500 group-hover:rotate-6 flex items-center justify-center bg-gray-200"
+          class="w-28 h-28 mb-3 rounded-full overflow-hidden border-4 border-khaki shadow-lg transition-all duration-500 group-hover:rotate-6 flex items-center justify-center bg-gray-200"
         >
           <img
             :src="dosen.foto"
@@ -75,16 +76,20 @@ import { dosenList } from "../composables/constants/Dosen";
             "
           />
         </div>
-        <h2 class="text-xl font-bold text-holy text-center mb-1">
-          {{ dosen.nama }}
-        </h2>
-        <p class="text-cosmos text-sm mb-2 text-center">{{ dosen.bidang }}</p>
-        <a
-          :href="`mailto:${dosen.kontak}`"
-          class="inline-block mt-2 px-4 py-1 rounded-full bg-khaki/80 text-cosmos font-semibold text-xs shadow hover:bg-cosmos hover:text-holy transition-colors duration-300"
-        >
-          {{ dosen.kontak }}
-        </a>
+        <div class="flex flex-col items-center w-full">
+          <h2 class="text-lg md:text-xl font-bold text-holy text-center mt-1 mb-0.5">
+            {{ dosen.nama }}
+          </h2>
+          <p class="text-cosmos text-xs md:text-sm mb-1 text-center font-medium">
+            {{ dosen.bidang }}
+          </p>
+          <a
+            :href="`mailto:${dosen.kontak}`"
+            class="inline-block mt-1 px-4 py-1 rounded-full bg-khaki/80 text-cosmos font-semibold text-xs md:text-sm shadow hover:bg-cosmos hover:text-holy transition-colors duration-300"
+          >
+            {{ dosen.kontak }}
+          </a>
+        </div>
       </div>
     </div>
   </div>
