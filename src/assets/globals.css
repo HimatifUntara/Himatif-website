@@ -949,6 +949,10 @@ video {
   width: 100%;
 }
 
+.w-\[140px\]{
+  width: 140px;
+}
+
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -1958,6 +1962,18 @@ video {
 
   .lg\:mt-36{
     margin-top: 9rem;
+  }
+
+  .lg\:ml-4{
+    margin-left: 1rem;
+  }
+
+  .lg\:mr-10{
+    margin-right: 2.5rem;
+  }
+
+  .lg\:mt-14{
+    margin-top: 3.5rem;
   }
 
   .lg\:flex{

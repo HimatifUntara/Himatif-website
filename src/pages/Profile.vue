@@ -42,7 +42,7 @@ const sectionRefs = ref([]);
         <img
           src="/public/images/untara.webp"
           alt="Universitas Tangerang Raya"
-          class="w-[100px] h-fit lg:w-[170px] mr-10"
+          class="w-[100px] h-fit lg:w-[170px] lg:mr-10"
         />
         <!-- Logo Himatif -->
         <img
@@ -54,7 +54,7 @@ const sectionRefs = ref([]);
         <img
           src="/public/images/Specta1.png"
           alt="Specta"
-          class="w-[150px] h-fit lg:w-[230px] ml-4 mt-14"
+          class="w-[140px] h-fit lg:w-[230px] lg:ml-4 mt-14"
         />
        
       </div>
