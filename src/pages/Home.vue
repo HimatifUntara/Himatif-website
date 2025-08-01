@@ -33,15 +33,19 @@ const sectionRefs = ref([]);
         <div
           class="absolute left-0 top-14 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-float bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
-         <!-- Animasi kanan -->
+        <!-- Animasi kanan dekstop -->
         <div
-          class="absolute right-7 bottom-1 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
+          class="hidden lg:block absolute right-7 top-1/2 -translate-y-1/2 w-[170px] h-[170px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
+        ></div>
+        <!-- Animasi kanan mobile -->
+        <div
+          class="block lg:hidden absolute right-[18px] top-[60%] -translate-y-1/2 w-[100px] h-[100px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
         <!-- Logo Untara -->
         <img
           src="/public/images/untara.webp"
           alt="Universitas Tangerang Raya"
-          class="w-[100px] h-fit lg:w-[170px] lg:mr-10"
+          class="w-[100px] h-fit mr-5 lg:w-[170px] lg:mr-10"
         />
         <!-- Logo Himatif -->
         <img
@@ -55,8 +59,8 @@ const sectionRefs = ref([]);
           alt="Specta"
           class="w-[140px] h-fit lg:w-[230px] lg:ml-4 mt-14"
         />
-       
       </div>
+      
       <div class="text-holy text-center my-4">
         <h1
           v-motion

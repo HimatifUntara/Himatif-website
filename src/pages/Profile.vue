@@ -34,15 +34,19 @@ const sectionRefs = ref([]);
         <div
           class="absolute left-0 top-14 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-float bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
-         <!-- Animasi kanan -->
+        <!-- Animasi kanan dekstop -->
         <div
-          class="absolute right-7 bottom-1 -translate-y-1/2 w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
+          class="hidden lg:block absolute right-7 top-1/2 -translate-y-1/2 w-[170px] h-[170px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
+        ></div>
+        <!-- Animasi kanan mobile -->
+        <div
+          class="block lg:hidden absolute right-[18px] top-[60%] -translate-y-1/2 w-[100px] h-[100px] animate-floates bg-cosmos bg-gradient-to-l from-cosmos from-56% to-khaki rounded-2xl -z-10"
         ></div>
         <!-- Logo Untara -->
         <img
           src="/public/images/untara.webp"
           alt="Universitas Tangerang Raya"
-          class="w-[100px] h-fit lg:w-[170px] lg:mr-10"
+          class="w-[100px] h-fit mr-5 lg:w-[170px] lg:mr-10"
         />
         <!-- Logo Himatif -->
         <img
@@ -56,8 +60,8 @@ const sectionRefs = ref([]);
           alt="Specta"
           class="w-[140px] h-fit lg:w-[230px] lg:ml-4 mt-14"
         />
-       
       </div>
+      
       <div class="text-holy text-center my-4">
         <h1
           v-motion
@@ -70,7 +74,7 @@ const sectionRefs = ref([]);
           :delay="300"
           class="font-bold text-3xl lg:text-7xl my-7 pb-2 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki bg-clip-text text-transparent"
         >
-          Our Strength Lies In Our Team
+           Our Strength Lies In Our Team
         </h1>
         <p
           v-motion
@@ -80,12 +84,11 @@ const sectionRefs = ref([]);
             x: 0,
             transition: { duration: 2000, ease: 'easeOut' },
           }"
-          :delay="300"
+          :delay="700"
           class="text-md"
         >
-         Kami persembahkan jajaran kabinet HIMATIF yang penuh semangat!
-          Bersama, kita kuatkan formasi dan wujudkan inovasi!
-        </p>
+        Kami persembahkan jajaran kabinet HIMATIF yang penuh semangat!
+          Bersama, kita kuatkan formasi dan wujudkan inovasi!        </p>
         <div
           v-motion
           :initial="{ opacity: 0, y: 100 }"
@@ -97,7 +100,7 @@ const sectionRefs = ref([]);
           :delay="500"
           class="mx-auto mt-10 w-fit h-fit bg-cosmos p-2 rounded-full animate-bounce"
         >
-          <a href="#strukturmember"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
+          <a href="#aboutUs"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
         </div>
       </div>
     </div>
