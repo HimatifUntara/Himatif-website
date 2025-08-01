@@ -3,26 +3,34 @@ import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 import { divisions } from "../composables/constants/StrukturMember";
 
 const selectedDivision = ref(divisions[0]);
-const imageWidth = 320;
 const offset = ref(0);
 const isHovered = ref(false);
 
-// Duplikat array untuk infinite loop
+// Responsive image width
+const imageWidth = ref(window.innerWidth < 768 ? 160 : 300);
+function handleResize() {
+  imageWidth.value = window.innerWidth < 768 ? 160 : 300;
+}
+window.addEventListener("resize", handleResize);
+
+// Duplikat array untuk seamless infinite scroll (3x)
 const loopImages = computed(() => [
+  ...selectedDivision.value.images,
   ...selectedDivision.value.images,
   ...selectedDivision.value.images,
 ]);
 
 let position = 0;
 let animationId = null;
-const speed = 0.7; // px per frame
+const speed = ref(window.innerWidth < 768 ? 0.5 : 0.8); // Lebih pelan di HP
 
 function animate() {
   if (!isHovered.value) {
-    position += speed;
-    // Jika sudah sampai setengah panjang array, langsung lompat ke awal tanpa animasi
-    if (position >= selectedDivision.value.images.length * imageWidth) {
-      position = 0;
+    position += speed.value;
+    // Reset posisi jika sudah lewat panjang 2x list (bukan 1x)
+    const singleListWidth = selectedDivision.value.images.length * imageWidth.value;
+    if (position >= singleListWidth * 2) {
+      position -= singleListWidth;
     }
     offset.value = -position;
   }
@@ -34,6 +42,7 @@ onMounted(() => {
 });
 onUnmounted(() => {
   if (animationId) cancelAnimationFrame(animationId);
+  window.removeEventListener("resize", handleResize);
 });
 watch(selectedDivision, () => {
   position = 0;
@@ -116,23 +125,31 @@ watch(selectedDivision, () => {
 
     <!-- Auto Slide Carousel -->
     <div
-      class="scroll-smooth relative overflow-hidden max-w-6xl mx-auto px-4 group"
+      class="relative overflow-x-auto overflow-y-hidden max-w-6xl mx-auto px-4 group touch-pan-x"
+      style="scrollbar-width: none; -ms-overflow-style: none;"
     >
       <div
         class="flex"
         :style="{ transform: `translateX(${offset}px)` }"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"
+        style="min-width: max-content;"
       >
         <template v-for="(img, index) in loopImages" :key="index">
           <div
             class="flex bg-transparent rounded-md flex-col items-center mx-2 flex-shrink-0 hover:scale-105"
+            :style="{ width: imageWidth + 'px' }"
           >
             <img
               :src="img.src"
               :alt="img.name"
               :jabatan="img.jabatan"
-              class="w-[300px] h-[300px] object-cover rounded-t-md"
+              :style="{
+                width: imageWidth + 'px',
+                height: imageWidth + 'px',
+                objectFit: 'cover',
+                borderRadius: '0.5rem'
+              }"
               loading="lazy"
             />
             <div class="flex items-center justify-center gap-2 w-full">
