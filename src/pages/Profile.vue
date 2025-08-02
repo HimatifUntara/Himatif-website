@@ -100,7 +100,7 @@ const sectionRefs = ref([]);
           :delay="500"
           class="mx-auto mt-10 w-fit h-fit bg-cosmos p-2 rounded-full animate-bounce"
         >
-          <a href="#aboutUs"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
+          <a href="#strukturmember"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
         </div>
       </div>
     </div>
