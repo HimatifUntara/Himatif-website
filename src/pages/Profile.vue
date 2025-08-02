@@ -3,7 +3,7 @@ import StrukturMember from "../component/StrukturMember.vue";
 import OurGallery from "../component/OurGallery.vue";
 import Dosen from "../component/Dosen.vue";
 import Footer from "../component/Footer.vue";
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 // const OurGallery = defineAsyncComponent(() =>
 // import ('../component/OurGallery.vue')
@@ -11,6 +11,22 @@ import { ref } from "vue";
 // import {defineAsyncComponent, ref} from 'vue';
 
 const sectionRefs = ref([]);
+const showScrollTop = ref(false);
+
+const handleScroll = () => {
+  showScrollTop.value = window.scrollY > 300;
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
@@ -128,6 +144,18 @@ const sectionRefs = ref([]);
   >
     <OurGallery />
   </section>
+
+   <!-- Tombol Scroll to Top -->
+  <button
+    v-if="showScrollTop"
+    @click="scrollToTop"
+    class="fixed bottom-6 right-6 z-50 bg-cosmos text-white p-3 rounded-full shadow-lg hover:bg-khaki transition-all"
+    aria-label="Scroll to top"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
 
   <!-- Footer -->
   <Footer />
