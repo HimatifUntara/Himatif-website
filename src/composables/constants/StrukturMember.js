@@ -61,7 +61,7 @@ export const divisions = [
       { src: "/images/KOMINFO/M.DIMAS BAYU PRATAMA_.jpg", name: "Muhamad Dimas Bayu Pratama", jabatan: "Anggota", instagram: "https://www.instagram.com/massbayy88/" },
       { src: "/images/KOMINFO/AURA SALSABILLA PUTRI.jpg", name: "Aura Salsabilla", jabatan: "Anggota", instagram: "https://www.instagram.com/araabillaaaaaaaaa/" },
       { src: "/images/KOMINFO/Nadia Nur Aulia.jpg", name: "Nadia Nur Aulia", jabatan: "Anggota",  instagram: "https://www.instagram.com/yxllnadd/" },
-      { src: "/images/KOMINFO/Aldo Saputra .jpg", name: "Aldo Saputra", jabatan: "Anggota", instagram: "https://www.instagram.com/_anomalienn/" },
+      { src: "/images/KOMINFO/Aldo Saputra.jpg", name: "Aldo Saputra", jabatan: "Anggota", instagram: "https://www.instagram.com/_anomaliennn/" },
     ],
   },
   {
