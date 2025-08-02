@@ -13,12 +13,14 @@ function handleResize() {
 }
 window.addEventListener("resize", handleResize);
 
-// Duplikat array untuk seamless infinite scroll (3x)
-const loopImages = computed(() => [
-  ...selectedDivision.value.images,
-  ...selectedDivision.value.images,
-  ...selectedDivision.value.images,
-]);
+// Duplikat array untuk seamless infinite scroll (10x, agar terasa unlimited dan smooth di semua divisi)
+const loopImages = computed(() => {
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+    arr = arr.concat(selectedDivision.value.images);
+  }
+  return arr;
+});
 
 let position = 0;
 let animationId = null;
@@ -27,10 +29,11 @@ const speed = ref(window.innerWidth < 768 ? 0.5 : 0.8); // Lebih pelan di HP
 function animate() {
   if (!isHovered.value) {
     position += speed.value;
-    // Reset posisi jika sudah lewat panjang 2x list (bukan 1x)
+    // Reset posisi jika sudah lewat setengah panjang array (agar seamless di semua divisi)
     const singleListWidth = selectedDivision.value.images.length * imageWidth.value;
-    if (position >= singleListWidth * 2) {
-      position -= singleListWidth;
+    const totalWidth = loopImages.value.length * imageWidth.value;
+    if (position >= totalWidth - singleListWidth) {
+      position = 0;
     }
     offset.value = -position;
   }
@@ -195,12 +198,6 @@ watch(selectedDivision, () => {
           </div>
         </template>
       </div>
-      <div
-        class="pointer-events-none absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-errie/90 via-errie/70 to-transparent"
-      ></div>
-      <div
-        class="pointer-events-none absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-charcoal/90 via-charcoal/70 to-transparent"
-      ></div>
     </div>
   </section>
 </template>
