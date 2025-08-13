@@ -90,7 +90,8 @@ onUnmounted(() => {
           :delay="300"
           class="font-bold text-3xl lg:text-7xl my-7 pb-2 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki bg-clip-text text-transparent"
         >
-           Our Strength Lies In Our Team
+          <!-- Our Strength Lies In Our Team -->
+          Strength Through Unity
         </h1>
         <p
           v-motion
@@ -104,7 +105,8 @@ onUnmounted(() => {
           class="text-md"
         >
         Kami persembahkan jajaran kabinet HIMATIF yang penuh semangat!
-          Bersama, kita kuatkan formasi dan wujudkan inovasi!        </p>
+        Bersama, kita kuatkan formasi dan wujudkan inovasi!
+        </p>
         <div
           v-motion
           :initial="{ opacity: 0, y: 100 }"

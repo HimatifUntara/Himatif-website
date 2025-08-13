@@ -1,17 +1,24 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import Sidebar from './Sidebar.vue'
 import { navLinks } from '../composables/constants/Navigation'
 
 const route = useRoute()
-const activeNav = ref(route.path) // aktifkan sesuai path saat ini
+const router = useRouter()
+const activeNav = ref(route.path)
 
 // Update activeNav jika route berubah (navigasi manual/refresh)
 watch(route, (val) => {
   activeNav.value = val.path
 })
 const sidebarOpen = ref(false)
+
+const handleNavClick = (href) => {
+  window.scrollTo({ top: 0, behavior: 'auto' }) // scroll langsung ke atas
+  activeNav.value = href
+  router.push(href)
+}
 </script>
 
 <template>
@@ -41,7 +48,7 @@ const sidebarOpen = ref(false)
         </li>
     </ul> -->
 
-    <ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
+    <!-- <ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
   <li
     v-for="link in navLinks"
     :key="link.label"
@@ -59,6 +66,26 @@ const sidebarOpen = ref(false)
         :class="activeNav === link.href ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'"
       ></span>
     </router-link>
+  </li>
+</ul> -->
+
+<ul class="text-holy hidden md:flex md:mr-10 items-center gap-3 md:gap-4 select-none">
+  <li
+    v-for="link in navLinks"
+    :key="link.label"
+    class="list-none"
+  >
+    <a
+      class="relative font-semibold transition duration-200 hover:text-khaki px-4 rounded-md"
+      style="cursor:pointer; user-select: none;"
+      @click.prevent="handleNavClick(link.href)"
+    >
+      {{ link.label }}
+      <span
+        class="absolute left-4 right-4 -bottom-1 h-[3px] rounded bg-khaki transition-all ease-in-out duration-300"
+        :class="activeNav === link.href ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'"
+      ></span>
+    </a>
   </li>
 </ul>
 

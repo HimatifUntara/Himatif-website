@@ -48,8 +48,9 @@ import { dosenList } from "../composables/constants/Dosen";
         }"
         class="text-center text-holy my-5 mx-auto leading-relaxed tracking-wide text-base md:text-lg max-w-xl md:max-w-2xl"
       >
-        Inilah para dosen Teknologi Informasi kami. Dengan keahlian dan passion mereka,<br class="hidden md:inline" />
-        mereka membimbing generasi penerus untuk menjadi talenta teknologi yang unggul.
+        <!-- Inilah para dosen Teknologi Informasi kami. Dengan keahlian dan passion mereka,<br class="hidden md:inline" />
+        mereka membimbing generasi penerus untuk menjadi talenta teknologi yang unggul. -->
+        Para dosen Teknologi Informasi kami berdedikasi membimbing dan menginspirasi mahasiswa menjadi talenta teknologi unggulan.
       </p>
     </div>
     <div
@@ -94,21 +95,3 @@ import { dosenList } from "../composables/constants/Dosen";
     </div>
   </div>
 </template>
-
-<style scoped>
-.bg-cosmos {
-  background-color: #2e3a4d;
-}
-.bg-errie {
-  background-color: #23272f;
-}
-.bg-khaki {
-  background-color: #e0c97f;
-}
-.text-holy {
-  color: #fffbe9;
-}
-.text-cosmos {
-  color: #2e3a4d;
-}
-</style>

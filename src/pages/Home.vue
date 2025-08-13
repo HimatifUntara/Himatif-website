@@ -4,11 +4,6 @@ import Vision from "../component/Vision.vue";
 import Footer from "../component/Footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
-// const OurGallery = defineAsyncComponent(() =>
-// import ('../component/OurGallery.vue')
-// );
-// import {defineAsyncComponent, ref} from 'vue';
-
 const sectionRefs = ref([]);
 const showScrollTop = ref(false);
 
@@ -29,7 +24,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- after:content-[''] after:w-20 after:left-0 after:-z-110 after:animate-wiggle after:bg-cosmos after:h-20 after:absolute after:rounded-xl -->
   <section
     class="overflow-hidden w-full h-[740px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
   >
@@ -151,12 +145,6 @@ onUnmounted(() => {
     </svg>
   </button>
 
-
   <!-- Footer -->
-  <section>
     <Footer />
-  </section>
-  <!-- <section id="ourGallery" ref="sectionRefs[3]" class="w-full h-full py-5 bg-errie [background:radial-gradient(circle,_rgba(28,31,35,1)_50%,_rgba(37,58,74,1)_100%)]">
-        <SocialMedia />
-    </section> -->
 </template>
