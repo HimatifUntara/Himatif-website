@@ -1,10 +1,9 @@
 <script setup>
-import AboutUs from "../component/AboutUs.vue";
-import Vision from "../component/Vision.vue";
-import Footer from "../component/Footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
+import AboutUs from "../component/AboutUs.vue";
+import Footer from "../component/Footer.vue";
 
-const sectionRefs = ref([]);
+// const sectionRefs = ref([]);
 const showScrollTop = ref(false);
 
 const handleScroll = () => {
@@ -24,6 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <!-- after:content-[''] after:w-20 after:left-0 after:-z-110 after:animate-wiggle after:bg-cosmos after:h-20 after:absolute after:rounded-xl -->
   <section
     class="overflow-hidden w-full h-[740px] bg-Home bg-no-repeat bg-center bg-fixed bg-cover"
   >
@@ -83,7 +83,7 @@ onUnmounted(() => {
           :delay="300"
           class="font-bold text-3xl lg:text-7xl my-7 pb-2 bg-cosmos bg-gradient-to-r from-cosmos from-56% to-khaki bg-clip-text text-transparent"
         >
-          Selamat Datang 
+          About Us
         </h1>
         <p
           v-motion
@@ -96,7 +96,7 @@ onUnmounted(() => {
           :delay="700"
           class="text-md"
         >
-          di Website Resmi HIMATIF Universitas Tangerang Raya
+        Yuk kenalan lebih dekat dengan Himpunan Mahasiswa Teknologi Informasi UNTARA!
         </p>
         <div
           v-motion
@@ -109,19 +109,18 @@ onUnmounted(() => {
           :delay="500"
           class="mx-auto mt-10 w-fit h-fit bg-cosmos p-2 rounded-full animate-bounce"
         >
-          <a href="#aboutUs"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
+          <a href="#strukturmember"><IconCarbonArrowDown class="lg:w-8 h-auto" /></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Visi & Misi -->
   <section
-    id="vision"
-    ref="sectionRefs[2]"
-    class="w-full h-full py-5 bg-charcoal"
+    id="AboutUs"
+    ref="sectionRefs[3]"
+    class="w-full h-full lg:pb-[140px] py-5 bg-gradient-to-r from-errie to-charcoal"
   >
-    <Vision />
+    <AboutUs />
   </section>
 
   <!-- Tombol Scroll to Top -->
@@ -138,4 +137,4 @@ onUnmounted(() => {
 
   <!-- Footer -->
     <Footer />
-</template>
+  </template>

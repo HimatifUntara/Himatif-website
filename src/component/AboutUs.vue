@@ -8,8 +8,15 @@ import { aboutUs } from "../composables/constants/AboutUs";
     class="mx-auto mb-[50px] hidden lg:flex flex-col gap-5 items-center cursor-pointer justify-center mt-20"
   >
     <div
-      class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
-    ></div>
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 600, duration: 900, ease: 'easeOut' },
+        }"
+        class="bg-holy w-[150px] h-2 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
 
     <h1
       v-motion
@@ -28,7 +35,20 @@ import { aboutUs } from "../composables/constants/AboutUs";
         Himatif
       </span>
     </h1>
+
+    <div
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 600, duration: 900, ease: 'easeOut' },
+        }"
+        class="bg-holy w-[70px] h-1 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
   </div>
+
+  
 
   <div
     v-for="(about, index) in aboutUs"
@@ -79,7 +99,7 @@ import { aboutUs } from "../composables/constants/AboutUs";
           y: 0,
           transition: { delay: 200, duration: 800, ease: 'easeOut' },
         }"
-        class="text-holy text-3xl font-bold my-4"
+        class="text-holy text-3xl font-bold"
       >
         About
         <span
@@ -88,6 +108,16 @@ import { aboutUs } from "../composables/constants/AboutUs";
           Himatif
         </span>
       </h1>
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 600, duration: 900, ease: 'easeOut' },
+        }"
+        class="bg-holy w-[100px] mb-5 h-1 bg-gradient-to-l from-khaki from-56% to-holy"
+      ></div>
 
       <div
         v-motion

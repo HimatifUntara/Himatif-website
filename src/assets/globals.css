@@ -787,6 +787,10 @@ video {
   margin-top: 1rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -961,6 +965,30 @@ video {
   width: 100%;
 }
 
+.w-\[1500px\]{
+  width: 1500px;
+}
+
+.w-72{
+  width: 18rem;
+}
+
+.w-\[500px\]{
+  width: 500px;
+}
+
+.w-\[800px\]{
+  width: 800px;
+}
+
+.w-\[900px\]{
+  width: 900px;
+}
+
+.w-\[70px\]{
+  width: 70px;
+}
+
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -987,6 +1015,14 @@ video {
 
 .max-w-xl{
   max-width: 36rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .flex-shrink-0{
@@ -1141,6 +1177,10 @@ video {
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .overflow-hidden{
@@ -1474,9 +1514,24 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-2{
@@ -1489,6 +1544,10 @@ video {
 
 .pt-2\.5{
   padding-top: 0.625rem;
+}
+
+.pt-4{
+  padding-top: 1rem;
 }
 
 .pt-8{
@@ -1740,10 +1799,6 @@ video {
 
 .will-change-transform{
   will-change: transform;
-}
-
-.\[background\:radial-gradient\(circle\2c _rgba\(28\2c 31\2c 35\2c 1\)_50\%\2c _rgba\(37\2c 58\2c 74\2c 1\)_100\%\)\]{
-  background: radial-gradient(circle, rgba(28,31,35,1) 50%, rgba(37,58,74,1) 100%);
 }
 
 .after\:absolute::after{
