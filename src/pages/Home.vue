@@ -1,9 +1,12 @@
 <script setup>
-import AboutUs from "../component/AboutUs.vue";
 import Vision from "../component/Vision.vue";
 import Footer from "../component/Footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
+import FaqAccordion from '../component/FaqAccordion.vue'
+import { useFaq } from '../composables/constants/UseFaq.js'
+
+const { faqList } = useFaq()
 const sectionRefs = ref([]);
 const showScrollTop = ref(false);
 
@@ -122,6 +125,10 @@ onUnmounted(() => {
     class="w-full h-full py-5 bg-charcoal"
   >
     <Vision />
+  </section>
+
+  <section class="py-12 px-4 bg-gradient-to-r from-errie to-charcoal">
+    <FaqAccordion :faqs="faqList" />
   </section>
 
   <!-- Tombol Scroll to Top -->
