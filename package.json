@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"vite --host --port 5173 --open\" \"tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/globals.css --watch\""
+    "dev": "concurrently \"vite --host --port 5173 --open\" \"tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/globals.css --watch\"",
+    "build": "tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/globals.css && vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
